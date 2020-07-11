@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 'nacos-perf.deepblueai.com'
+        file-extension: 'yml'
+        namespace: '626f41d2-0126-4212-aeb6-ad2de4433d25'
+      discovery:
+        server-addr: 'nacos-perf.deepblueai.com'
+#  elasticjob:
+#    datasource:
+#      url: jdbc:mysql://rm-wz9103hxfjd22t1j2.mysql.rds.aliyuncs.com:3306/elasticjob_log?useUnicode=true&characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
+#      driver-class-name: com.mysql.jdbc.Driver
+#      username: quixmart
+#      password: qx#dp0810
+#    regCenter:
+#      serverList: zookeeper.deepblueai.com:2181
+#      namespace: quixmart-elasticJob-prod

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 使用方法： 直接通过运行maven插件来生成相应的model, mapper及xml
+maven命令： mybatis-generator:generate -Dmybatis.generator.overwrite=true
+-->
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <properties resource="generator.properties"/>
+
+  <context defaultModelType="flat" id="Mysql" targetRuntime="MyBatis3Simple">
+    <property name="beginningDelimiter" value="`"/>
+    <property name="endingDelimiter" value="`"/>
+
+    <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+      <property name="mappers" value="com.quixmart.common.mapper.CommonMapper"/>
+    </plugin>
+
+    <jdbcConnection connectionURL="${spring.datasource.url}"
+      driverClass="${spring.datasource.driver-class-name}"
+      password="${spring.datasource.password}"
+      userId="${spring.datasource.username}">
+    </jdbcConnection>
+
+    <javaModelGenerator targetPackage="${targetModelPackage}" targetProject="${targetJavaProject}"/>
+
+    <sqlMapGenerator targetPackage="${targetXMLPackage}" targetProject="${targetResourcesProject}"/>
+
+    <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER"/>
+
+    <!--<table domainObjectName="AdsMaterial" tableName="ads_material">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="BaseConfig" tableName="base_config">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="BehaviorMonitorEvent" tableName="behavior_monitor_event">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="BehaviorMonitorSummaryAll" tableName="behavior_monitor_summary_all">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="CarrierAlg" tableName="carrier_alg">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="CarrierAndroid" tableName="carrier_android">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="CarrierCategory" tableName="carrier_category">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="Carrier" tableName="carrier">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="CarrierPosition" tableName="CarrierPosition">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="CityInfo" tableName="city_info">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="Customer" tableName="customer">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="CustomerUser" tableName="customer_user">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="CustomerUserRole" tableName="customer_user_role">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="LaunchPlanExclude" tableName="launch_plan_exclude">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="LaunchPlanMonitor" tableName="launch_plan_monitor">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="MaterialCounterHour" tableName="material_counter_hour">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="Material" tableName="material">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="MaterialTag" tableName="material_tag">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="ModuleVideoDetail" tableName="module_video_detail">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="ModuleVideoSummary" tableName="module_video_summary">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="PositionFormat" tableName="position_format">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="Position" tableName="position">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="PositionConfig" tableName="position_config">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="StationInformation" tableName="station_information">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="Tag" tableName="tag">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="TagCategory" tableName="tag_category">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+
+    <!--<table domainObjectName="PlayLogVideoMark" tableName="v3_play_log_video_mark">-->
+      <!--<property name="useActualColumnNames" value="false"/>-->
+      <!--<generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+    <!--</table>-->
+<!--    <table domainObjectName="PositionDeviceSmv" tableName="v3_position_device_smv">-->
+<!--      <property name="useActualColumnNames" value="false"/>-->
+<!--      <generatedKey column="id" identity="true" sqlStatement="Mysql"/>-->
+<!--    </table>-->
+
+   <!-- <table domainObjectName="AnnoTask" tableName="v3_anno_task">
+      <property name="useActualColumnNames" value="false"/>
+      <generatedKey column="id" identity="true" sqlStatement="Mysql"/>
+    </table>-->
+
+     <table domainObjectName="MediaDeviceSmv" tableName="v3_media_device_smv">
+      <property name="useActualColumnNames" value="false"/>
+      <generatedKey column="id" identity="true" sqlStatement="Mysql"/>
+    </table>
+
+  </context>
+</generatorConfiguration>

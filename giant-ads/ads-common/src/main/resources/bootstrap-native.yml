@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 10.1.1.99:8848,10.1.1.97:8848
+        file-extension: 'yml'
+        namespace: '42d10253-f195-4920-a7ff-3874b49739d7'
+        username: nacos
+        password: nacos
+      discovery:
+        server-addr: 10.1.1.97:8848
+        namespace: '42d10253-f195-4920-a7ff-3874b49739d7'
+        username: nacos
+        password: nacos
+#  elasticjob:
+#    datasource:
+#      url: jdbc:mysql://10.1.1.97:3311/batch_log_native?useUnicode=true&characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
+#      driver-class-name: com.mysql.jdbc.Driver
+#      username: root
+#      password: Rtqw123OpnmER
+#    regCenter:
+#      serverList: 10.1.1.97:2181
+#      namespace: quixmart-elasticJob-native
