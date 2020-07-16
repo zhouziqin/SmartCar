@@ -45,10 +45,10 @@ server:
   port: 8003
 cdn:
   ali:
-    endpoint: http://oss-cn-shenzhen.aliyuncs.com
-    accessKeyId: LTAIBb9nFpfkmENq
-    accessKeySecret: slx98VOtlpkN8fQH67cKg7n8GpTJyo
-    bucketName: pandabus-oss
+    endpoint: xx
+    accessKeyId: xx
+    accessKeySecret: xx
+    bucketName: xx
 
 logging:
   level:
